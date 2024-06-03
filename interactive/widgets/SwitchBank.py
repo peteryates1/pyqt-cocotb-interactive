@@ -2,7 +2,7 @@
 from PyQt5.QtWidgets import QHBoxLayout, QWidget
 from PyQt5.QtCore import pyqtSignal
 
-from Switch import Switch
+from widgets.Switch import Switch
 
 class SwitchBank(QWidget):
     value=pyqtSignal(int)

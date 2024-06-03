@@ -10,11 +10,10 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QHBoxLayout, QVBoxLayout,
 from PyQt5.QtCore import pyqtSlot, Qt
 from PyQt5.QtGui import QFont
 
-sys.path.append('/home/peter/git/pyqt-cocotb-interactive/interactive/widgets')
-from NibbleSwitchDisplay import NibbleSwitchDisplay
-from SevenSegmentDisplay import SevenSegmentDisplay
-from ConsumerMonitor import ConsumerMonitor
-from ProducerMonitor import ProducerMonitor
+from widgets.NibbleSwitchDisplay import NibbleSwitchDisplay
+from widgets.SevenSegmentDisplay import SevenSegmentDisplay
+from widgets.ConsumerMonitor import ConsumerMonitor
+from widgets.ProducerMonitor import ProducerMonitor
 
 def int_setter(h: SimHandleBase, v: int):
     h.value = v
@@ -40,6 +39,7 @@ class InteractiveAdder(QMainWindow):
     def __init__(self, dut):
         super(InteractiveAdder, self).__init__()
         self.setWindowTitle('Interactive 4 Bit Full Adder')
+        self.statusBar().showMessage("Ready") 
         self.dut = dut
         dut.a.value = 0
         dut.b.value = 0
@@ -87,9 +87,11 @@ async def main(dut):
     w = InteractiveAdder(dut)
     w.show()
     while(w.run):
-        if(app.hasPendingEvents()):
+        while(app.hasPendingEvents()):
             app.processEvents()
         await Timer(1, units="ns")
+        timeh, timel = cocotb.simulator.get_sim_time()
+        w.statusBar().showMessage(f"{(timeh<<32)+timel:,}ps")
     cocotb.log.info('Done')
 
 # run the main function only if this module is executed as the main script

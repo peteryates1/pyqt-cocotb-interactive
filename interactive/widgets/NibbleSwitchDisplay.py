@@ -4,9 +4,9 @@ import os
 from PyQt5.QtWidgets import QApplication, QLabel, QHBoxLayout, QVBoxLayout, QWidget
 from PyQt5.QtCore import pyqtSignal, pyqtSlot
 
-from Switch import Switch
-from SevenSegmentLED import SevenSegmentLED
-from SwitchBank import SwitchBank
+from widgets.Switch import Switch
+from widgets.SevenSegmentLED import SevenSegmentLED
+from widgets.SwitchBank import SwitchBank
 
 class NibbleSwitchDisplay(QWidget):
     value=pyqtSignal(int)

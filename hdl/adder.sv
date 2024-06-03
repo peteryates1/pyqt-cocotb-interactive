@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module adder #(
     DATA_WIDTH = 4
 ) (

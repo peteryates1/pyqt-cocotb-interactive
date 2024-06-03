@@ -1,7 +1,7 @@
 from enum import Enum
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QSpacerItem, QSizePolicy
 from PyQt5.QtCore import QMargins, QSize
-from SevenSegmentLED import SevenSegmentLED
+from widgets.SevenSegmentLED import SevenSegmentLED
 
 class SevenSegmentDisplay(QWidget):
 
