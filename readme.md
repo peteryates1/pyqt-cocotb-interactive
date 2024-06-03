@@ -8,7 +8,7 @@ Very simple interactive simulation using [cocotb] and [PyQt5] based on on [GHDL 
 
 ## Requirements
 - [Python] (tested using version 3.10)
-- [iverilog] (tested using version 13 from master)
+- [iverilog] (tested using version 13 from master) [iverilog-src]
 - [GNU Make]
 
 ## Running
