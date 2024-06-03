@@ -13,4 +13,4 @@ async def test(dut):
                 dut.c.value = c
                 q = a + b + c
                 await Timer(2, units="ns")
-                assert dut.q.value == q, f"Q: {dut.q.value} does not match expected q: {q}"
+                assert dut.q.value == q, f"dut.q: {dut.q.value} does not match expected q: {q}"
