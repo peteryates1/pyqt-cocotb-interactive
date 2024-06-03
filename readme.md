@@ -2,6 +2,10 @@
 
 Very simple interactive simulation using [cocotb] and [PyQt5] based on on [GHDL Interactive Simulation] and [GHDL VPI virtual board]
 
+## Resulting GUI
+
+![Interactive Adder Simulation](screenshot.png)
+
 ## Requirements
 - [Python] (tested using version 3.10)
 - [iverilog] (tested using version 13 from master)
