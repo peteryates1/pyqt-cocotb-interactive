@@ -1,6 +1,6 @@
 # pyqt cocotb interactive
 
-Very simple interactive simulation using cocotb and pyqt5 based on on [GHDL Interactive Simulation]
+Very simple interactive simulation using cocotb and pyqt5 based on on [GHDL Interactive Simulation] and [GHDL VPI virtual board]
 
 ## Requirements
 - [Python] (tested using version 3.10)
@@ -16,7 +16,7 @@ make
 ```
 
 ## Credits
-Many thanks to the [GHDL VPI virtual board] project for the inspiration and the images (which I shamelessly borrowed given how artistically challenged I am).
+Many thanks to the [GHDL Interactive Simulation] and [GHDL VPI virtual board] project for the inspiration and the images (which I shamelessly borrowed given how artistically challenged I am - ditto).
 
 
 [GHDL]:                         https://ghdl.github.io/ghdl/about.html

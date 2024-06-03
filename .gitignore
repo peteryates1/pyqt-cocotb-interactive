@@ -1,5 +1,3 @@
-/hdl
-/interactive
-/requirements.txt
-/tb
-/untitled.ui
+**/__pycache__
+**/sim_build
+**/results.xml
